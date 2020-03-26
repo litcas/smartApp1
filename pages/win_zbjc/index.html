@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>指标监测</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_zbjc/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+
+<body>
+    <div id="wrap" v-cloak>
+        <van-nav-bar left-arrow title="指标监测" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+        <van-row class="main">
+          <van-row class="main-header">
+            <van-col span="12">
+                <van-cell title="指标">
+                    <van-dropdown-menu>
+                        <van-dropdown-item v-model="zb" :options="zbOption"></van-dropdown-item>
+                    </van-dropdown-menu>
+                </van-cell>
+            </van-col>
+            <van-col span="12">
+                <van-cell title="地区">
+                    <van-dropdown-menu>
+                        <van-dropdown-item v-model="dq" :options="dqOption"></van-dropdown-item>
+                    </van-dropdown-menu>
+                </van-cell>
+            </van-col>
+          </van-row>
+          <van-divider content-position="left" :style="{ color: '#000',padding: '0 16px',fontWeight:'600'   }">监测信息</van-divider>
+          <van-row class="report-panel">
+            <ve-line :data="chartData" height="300px"></ve-line>
+          </van-row>
+          <van-row class="ghz-box">
+            <van-col span="12">
+                <van-cell title="当前值">
+                    3017.04公顷
+                </van-cell>
+            </van-col>
+            <van-col span="12">
+                <van-cell title="规划值">
+                    2026公顷
+                </van-cell>
+            </van-col>
+          </van-row>
+          <van-divider content-position="left" :style="{ color: '#000',padding: '0 16px',fontWeight:'600'   }">辖区信息</van-divider>
+          <van-row>
+            <table class='table' border="1">
+                <tbody>
+                    <tr>
+                        <th>地区</th>
+                        <th>指标值</th>
+                        <th>规划值</th>
+                    </tr>
+                    <tr>
+                        <td>长沙市</td>
+                        <td>876</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                      <td>株洲市</td>
+                      <td>435</td>
+                      <td>375</td>
+                    </tr>
+                    <tr>
+                      <td>湘潭市</td>
+                      <td>459</td>
+                      <td>278</td>
+                    </tr>
+                </tbody>
+            </table>
+          </van-row>
+        </van-row>
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../res/v-charts/echarts.js"></script>
+<script src="../../res/v-charts/v-charts.js"></script>
+<link rel="stylesheet" href="../../res/v-charts/index.css">
+<script src="../../script/common.js"></script>
+<script src="../../js/win_zbjc/index.js"></script>
+
+</html>

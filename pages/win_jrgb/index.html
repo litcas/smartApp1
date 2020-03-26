@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>今日耕保</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_jrgb/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+
+<body>
+    <div id="wrap" v-cloak>
+        <van-nav-bar left-arrow title="今日耕保" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+        <van-row class="main">
+            <van-tabs :ellipsis="false">
+                <van-tab v-for="(o,index) in list" :title="o.title">
+
+                </van-tab>
+            </van-tabs>
+        </van-row>
+        <van-row>
+            <van-tabbar v-model="active">
+                <van-tabbar-item icon="new">新闻</van-tabbar-item>
+                <van-tabbar-item icon="video">视频</van-tabbar-item>
+            </van-tabbar>
+        </van-row>
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_jrgb/index.js"></script>
+
+</html>

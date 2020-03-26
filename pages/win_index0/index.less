@@ -1,0 +1,210 @@
+@import '../../less/common';
+
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: calc(100% - 46px);
+    width: 100%;
+}
+
+.esri-widget--button {
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.esri-ui-top-right {
+    .rem(margin-top,54);
+}
+
+.fwcx-btn {
+    text-align: center;
+    font-size: 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+    .fwcx-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .fwcx-title {
+        .rem(font-size,10);
+        color: #8a8a8a;
+        margin-top: 4px;
+    }
+
+    &+.fwcx-btn {
+        margin-top: 15px;
+    }
+}
+
+.van-popup-center {
+    bottom: 1%;
+    overflow-y: hidden!important;
+    display: flex;
+    flex-flow: column;
+    width: 70%!important;
+
+    .van-checkbox-group {
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    .button {
+        font-size: 0;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+.map-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    .rem(height,54);
+    display: flex;
+
+    .map-header-user {
+        width: 15%;
+        background-color: #fff;
+        background-image: url("../../image/user.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 35%;
+    }
+
+    .van-search {
+        flex: 1;
+        padding: 10px 0;
+
+        .van-search__action {
+            padding: 0 20px;
+        }
+    }
+}
+
+.map-aside-right {
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    .rem(font-size,10);
+}
+
+.map-aside-left-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    .rem(font-size,10);
+}
+.map-aside-left-top{
+  position: absolute;
+  top: 80px;
+  left: 15px;
+  .rem(font-size,10);
+}
+
+.map-aside-bottom {
+    position: absolute;
+    bottom: 5%;
+    left: 23%;
+    right: 17%;
+    text-align: center;
+    height: 50px;
+
+    .sumit {
+        top: 0;
+        position: absolute;
+        left: 0;
+        width: 50%;
+    }
+
+    .cancal {
+        top: 0;
+        position: absolute;
+        right: 0;
+        width: 35%;
+    }
+}
+
+.main {
+    height: calc(100% - 46px);
+    background-color: #e2e2e2;
+    position: relative;
+    overflow-y: auto;
+
+    .my {
+        .rem(height,90);
+        .rem(line-height,90);
+        background: #fff;
+        .rem(font-size,20);
+        display: flex;
+        justify-content: space-around;
+
+        .icon-user {
+            display: inline-block;
+            vertical-align: middle;
+            .rem(width,28);
+            .rem(height,28);
+            background-size: cover;
+            background-position: center;
+            background-image: url("../../image/user.png");
+            .rem(margin-right,14);
+        }
+
+        .address {
+            .rem(font-size,15);
+        }
+    }
+
+    .list-item {
+        .rem(font-size,14);
+        background: #fff;
+        position: relative;
+        .rem(line-height,65);
+        .rem(height,65);
+        margin: 0.1rem 0;
+        padding: 0 0.3rem;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            .rem(width,20);
+            .rem(height,20);
+            background-size: cover;
+            background-position: center;
+            .rem(margin-right,16);
+        }
+
+        .icon-msg {
+            background-image: url("../../image/msg.png");
+        }
+
+        .icon-download {
+            background-image: url("../../image/download.png");
+        }
+
+        .icon-updatepwd {
+            background-image: url("../../image/updatepwd.png");
+        }
+    }
+
+    .bottom-button {
+        width: 55%;
+        margin: 0 auto;
+        .rem(height,37);
+        .rem(font-size,14);
+        background: @bgColorBlue;
+        color: #fff;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+    }
+}

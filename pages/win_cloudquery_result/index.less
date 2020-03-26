@@ -1,0 +1,47 @@
+@import '../../less/common';
+
+.main {
+    height: calc(100% - 46px);
+    background-color: #e2e2e2;
+    position: relative;
+    overflow-y: hidden;
+
+    .tab-header{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      .rem(line-height,45);
+      .rem(height,45);
+      .rem(font-size,14);
+      background: #f8f8f8;
+      display: flex;
+      .tab-item{
+        flex:1;
+        text-align: center;
+
+      }
+    }
+
+    .tab-main{
+      overflow-y: auto;
+      .rem(margin-top,60);
+      height: calc(100% - .6rem);
+      .list-item {
+          .rem(font-size,14);
+          background: #fff;
+          position: relative;
+          .rem(line-height,65);
+          .rem(height,65);
+          display: flex;
+          flex-flow: row;
+          border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+
+          .list-item-col{
+            flex: 1;
+            text-align: center;
+          }
+      }
+    }
+
+
+}

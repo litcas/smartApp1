@@ -1,0 +1,78 @@
+@import '../../less/common';
+
+.main {
+    height: calc(100% - 46px);
+    background-color: #e2e2e2;
+    position: relative;
+    overflow-y: hidden;
+
+    .wd5{
+      width: 15%;
+    }
+    .wd15{
+      width: 25%;
+    }
+    .flex-1{
+      flex:1;
+    }
+
+    .tab-header{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      .rem(line-height,45);
+      .rem(height,45);
+      .rem(font-size,13);
+      background: #f8f8f8;
+      display: flex;
+      .tab-item{
+
+        text-align: center;
+        &+.tab-item{
+          border-left: 0.5px solid rgba(0, 0, 0, 0.2);
+        }
+
+
+      }
+    }
+
+    .tab-main{
+      overflow-y: auto;
+      .rem(margin-top,60);
+      height: calc(100% - .6rem);
+      .list-item {
+          .rem(font-size,12);
+          background: #fff;
+          position: relative;
+          line-height: 2;
+          display: flex;
+          flex-flow: row;
+          border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+          padding: 20px 0;
+          margin-bottom: 15px;
+
+          .list-item-col{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            &+.list-item-col{
+              border-left: 0.5px solid rgba(0, 0, 0, 0.2);
+            }
+            &.tl-left p{
+              text-align: left;
+              width: 90%;
+            }
+
+            &.operator{
+              p{
+                margin-bottom: 10px;
+              }
+            }
+          }
+      }
+    }
+
+
+}

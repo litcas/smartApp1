@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>云查询结果展示</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_cloudquery_resultshow/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+
+<body>
+    <div id="wrap" v-cloak>
+        <van-nav-bar left-arrow :title="title" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+        <van-row class="main">
+            <!-- <van-swipe :autoplay="3000" height="280">
+                <van-swipe-item v-for="(image, index) in images" :key="index" >
+                    <img :src="image" />
+                </van-swipe-item>
+            </van-swipe> -->
+            <van-tabs>
+                <van-tab title="土地利用现状">
+                    <table class='table' border="1">
+                        <caption>土地利用现状查询结果</caption>
+                        <tbody>
+                            <tr>
+                                <th>地类名称</th>
+                                <th>图斑面积（亩）</th>
+                            </tr>
+                            <tr v-for="o in tdlyData" :key="o.FID">
+                                <td>{{o.坐落单位名}}-{{o.地类名称}}</td>
+                                <td>{{o.图斑面积}}</td>
+                            </tr>
+                            <tr v-if="tdlyData.length===0">
+                              <td colspan="2">该区域未查询到结果</td>
+                            </tr>
+                            <!-- <tr>
+                                <td>合计</td>
+                                <td>31.6</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </van-tab>
+                <van-tab title="土地规划">
+                    <table class='table' border="1">
+                        <caption>土地规划</caption>
+                        <tbody>
+                            <tr>
+                                <th>地类名称</th>
+                                <th>面积（亩）</th>
+                            </tr>
+                            <tr>
+                                <td>允许建设区</td>
+                                <td>3118.6</td>
+                            </tr>
+                            <tr>
+                                <td>合计</td>
+                                <td>3118.6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </van-tab>
+                <van-tab title="基本农田">
+                    <table class='table' border="1">
+                        <caption>基本农田</caption>
+                        <tbody>
+                            <tr>
+                                <th>地类编码</th>
+                                <th>地类名称</th>
+                                <th>图斑面积（亩）</th>
+                            </tr>
+                            <tr v-for="o in jbntData" :key="o.FID">
+                                <td>{{o.地类编码}}</td>
+                                <td>{{o.坐落单位名}}-{{o.地类名称}}</td>
+                                <td>{{o.图斑面积}}</td>
+                            </tr>
+                            <tr v-if="jbntData.length===0">
+                              <td colspan="3">该区域未查询到结果</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </van-tab>
+                <van-tab title="生态红线">
+                    <table class='table' border="1">
+                        <caption>生态红线</caption>
+                        <tbody>
+                            <tr>
+                                <th>地类名称</th>
+                                <th>面积（亩）</th>
+                            </tr>
+                            <tr>
+                                <td>王家农村</td>
+                                <td>4422</td>
+                            </tr>
+                            <tr>
+                                <td>合计</td>
+                                <td>4422</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </van-tab>
+            </van-tabs>
+        </van-row>
+    </div>
+</body>
+
+
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_cloudquery_resultshow/index.js"></script>
+
+<script src="../../res/arcgisapi/GCJ2WGS.js"></script>
+<script src="../../res/arcgisapi/init.js"></script>
+
+
+
+
+</html>

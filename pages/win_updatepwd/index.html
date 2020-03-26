@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>修改密码</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_updatepwd/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+<body>
+    <div id="wrap" v-cloak>
+      <van-nav-bar left-arrow title="修改密码" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+      <van-row class="main">
+        <div class="input-wrap user">
+            <label for="user">当前密码</label>
+            <input id="user" type="password" v-model="form.pwd" maxlength="16">
+        </div>
+        <div class="input-wrap phone">
+            <label for="phone">新密码</label>
+            <input id="phone" type="password" v-model="form.newpwd" maxlength="11">
+        </div>
+        <div class="input-wrap phone">
+            <label for="phone">确认新密码</label>
+            <input id="phone" type="password" v-model="form.cnewpwd" maxlength="11">
+        </div>
+          <button class="bottom-button" type="button" :class="[btnDisabled===true ? 'disabled' :'']" :disabled="btnDisabled" @click="updatepwd">确 定</button>
+      </van-row>
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_updatepwd/index.js"></script>
+</html>

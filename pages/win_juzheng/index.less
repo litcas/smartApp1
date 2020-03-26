@@ -1,0 +1,71 @@
+@import '../../less/common';
+
+.van-cell__title {
+    width: 30%!important;
+    flex: none!important;
+}
+
+.van-cell__value {
+    flex: 1!important;
+    .van-hairline--top-bottom::after{
+      display: none;
+    }
+}
+
+.van-cell__title,
+.van-dropdown-menu {
+    .rem(height,30)!important;
+    .rem(line-height,30)!important;
+}
+
+.van-dropdown-menu__item {
+    justify-content: flex-end!important;
+    margin-right: 10px;
+}
+
+.van-tabs {
+    background: #fff;
+    height: calc(100% - 60px - 240px);
+
+    .van-tabs__content {
+        height: calc(100% - 44px);
+        overflow-y: auto;
+    }
+}
+
+.van-uploader {
+    padding: 0 5px;
+}
+
+.main {
+    height: calc(100% - 46px);
+    background-color: #ffffff;
+    position: relative;
+    overflow-y: hidden;
+
+    .van-tab {
+        .rem(font-size,12);
+    }
+
+    .van-tabs__content {
+        .rem(font-size,14);
+    }
+
+    .bottom-box {
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+
+        .van-col {
+            font-size: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button {
+                background: rgba(22, 155, 213, 1);
+                border-radius: 10px;
+            }
+        }
+    }
+}

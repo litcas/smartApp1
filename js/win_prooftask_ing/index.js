@@ -1,0 +1,1 @@
+apiready=function(){apiready_init(),vm.$mount("#wrap")};var vm=new Vue({el:"#wrap",data:{list:[]},methods:{onClickLeft:function(){this.closeWin()},openW:function(i,n){this.openWin(i,n)}},mounted:function(){this.list=[{id:1,name:"任务1",type:"举证",source:"国土局",requiredTime:"2019/12/08 00:00",status:"正在进行"}]}});

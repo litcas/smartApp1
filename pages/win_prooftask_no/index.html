@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>未举证的任务</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_prooftask_no/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+<body>
+    <div id="wrap" v-cloak>
+      <van-nav-bar left-arrow title="未举证的任务" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+      <van-row class="main">
+        <van-row class="tab-header">
+          <span class="tab-item wd5">编号</span>
+          <span class="tab-item flex-1">任务详情</span>
+          <span class="tab-item wd15">操作</span>
+        </van-row>
+        <van-row class="tab-main">
+          <van-row class="list-item" v-for="(o,index) in list" :key="o.id" >
+            <div class="list-item-col wd5">{{index+1}}</div>
+            <div class="list-item-col flex-1 tl-left">
+                <p>任务名称：{{o.name}}</p>
+                <p>任务类型：{{o.type}}</p>
+                <p>任务来源：{{o.source}}</p>
+                <p>时间要求：{{o.requiredTime}}</p>
+                <p>接受时间：{{o.receiveTime}}</p>
+            </div>
+            <div class="list-item-col wd15 operator">
+                <p><van-button round type="info" size="small">下载任务</van-button></p>
+                <p><van-button round type="primary"  size="small">举证</van-button></p>
+            </div>
+          </van-row>
+        </van-row>
+      </van-row>
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_prooftask_no/index.js"></script>
+</html>

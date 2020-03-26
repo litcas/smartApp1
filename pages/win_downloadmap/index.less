@@ -1,0 +1,40 @@
+@import '../../less/common';
+
+.main {
+    height: calc(100% - 46px);
+    background-color: #e2e2e2;
+    position: relative;
+    overflow-y: auto;
+
+    .list-item { 
+        .rem(font-size,16);
+        background: #fff;
+        position: relative;
+        .rem(line-height,70);
+        .rem(height,70);
+        margin: 0.1rem 0;
+        .rem(text-indent,25);
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            .rem(width,26);
+            .rem(height,26);
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .icon-download {
+            background-image: url("../../image/download.png");
+            right: 22%;
+        }
+
+        .icon-remove {
+            background-image: url("../../image/remove.png");
+            right: 8%;
+        }
+    }
+}

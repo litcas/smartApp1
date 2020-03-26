@@ -1,0 +1,226 @@
+@baseFontSize: 100; //基于视觉稿横屏尺寸/100得出的基准font-size
+
+.rem(@name, @px) {
+    // @{name}: @px / @baseFontSize * 1rem;
+    @{name}: @px / @baseFontSize * 1rem;
+}
+
+@bgColorBlue: #1989fa;
+
+[v-cloak] {
+    display: none;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+#wrap {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: #efefef;
+    color: #000;
+    height: 100%;
+    position: relative;
+
+    min-width:320px .van-skeleton {
+        background: #fff;
+        height: 100%;
+        padding: 1.2rem 0.2rem;
+
+        .van-skeleton__row,
+        .van-skeleton__title {
+            height: 0.2rem;
+            background-color: #f2f3f5;
+        }
+    }
+
+    .common-header {
+        height: 46px;
+        line-height: 46px;
+        .van-nav-bar__title{
+          color: @bgColorBlue;
+        }
+    }
+}
+
+#mapDiv {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+a,
+body,
+center,
+cite,
+code,
+dd,
+del,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hr,
+html,
+img,
+input,
+label,
+legend,
+li,
+mark,
+ol,
+p,
+section,
+span,
+strong,
+textarea,
+time,
+ul,
+var {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+body,
+html {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    background-color: #fff;
+}
+
+article,
+aside,
+details,
+fieldset,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+    display: block;
+}
+
+a,
+button,
+cite,
+code,
+del,
+em,
+img,
+label,
+mark,
+small,
+strong,
+textarea,
+time,
+var {
+    display: inline-block;
+}
+
+footer,
+header,
+section {
+    position: relative;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+button,
+input,
+textarea {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1em;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+}
+
+span {
+    display: inline-block;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+.wordWrap,
+label {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+.clearfix:after {
+    content: ' ';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}

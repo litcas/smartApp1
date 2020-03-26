@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>举证</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_juzheng/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+
+<body>
+    <div id="wrap" v-cloak>
+        <van-nav-bar left-arrow title="举证" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+        <van-row class="main">
+            <van-swipe :autoplay="3000" height="240">
+                <van-swipe-item v-for="(image, index) in images" :key="index">
+                    <img :src="image" />
+                </van-swipe-item>
+            </van-swipe>
+            <van-tabs>
+                <van-tab title="举证地块">
+                    <van-cell title="选择地块">
+                        <van-dropdown-menu>
+                            <van-dropdown-item v-model="xzdk" :options="xzdkOption"></van-dropdown-item>
+                        </van-dropdown-menu>
+                    </van-cell>
+                    <van-cell title="是否已举证">
+                        <van-dropdown-menu>
+                            <van-dropdown-item v-model="sfjz" :options="sfjzOption"></van-dropdown-item>
+                        </van-dropdown-menu>
+                    </van-cell>
+                    <van-cell title="地块信息">
+                        <van-field v-model="message" rows="2" autosize type="textarea" placeholder="请输入地块信息"></van-field>
+                    </van-cell>
+                </van-tab>
+                <van-tab title="举证记录">
+                    <van-cell title="变更类型">
+                        <van-dropdown-menu>
+                            <van-dropdown-item v-model="bglx" :options="bglxOption"></van-dropdown-item>
+                        </van-dropdown-menu>
+                    </van-cell>
+                    <van-cell title="变更后地类">
+                        <van-dropdown-menu>
+                            <van-dropdown-item v-model="bghdl" :options="bghdlOption"></van-dropdown-item>
+                        </van-dropdown-menu>
+                    </van-cell>
+                    <van-cell title="变更面积">
+                        <van-field v-model="message" rows="2" autosize type="textarea" placeholder="请输入变更面积"></van-field>
+                    </van-cell>
+                    <van-cell title="地块编辑">
+                        <van-button type="info" size="small">编辑</van-button>
+                    </van-cell>
+                </van-tab>
+                <van-tab title="举证拍摄">
+                    <van-divider :style="{ color: 'rgb(162, 162, 162)', borderColor: 'rgb(162, 162, 162)', padding: '0 16px' }">
+                        全景照
+                    </van-divider>
+                    <van-uploader v-model="qjFileList" multiple :max-count="3"></van-uploader>
+                    <van-divider :style="{ color: 'rgb(162, 162, 162)', borderColor: 'rgb(162, 162, 162)', padding: '0 16px' }">
+                        近景照
+                    </van-divider>
+                    <van-uploader v-model="jzFileList" multiple :max-count="3"></van-uploader>
+                    <van-cell title="暂无预约信息">
+                        <van-button type="info" disabled size="small">视频邀约</van-button>
+                    </van-cell>
+                </van-tab>
+            </van-tabs>
+            <van-row class="bottom-box" type="flex">
+                <van-col span="12"><van-button type="info" >清除举证</van-button></van-col>
+                <van-col span="12"><van-button type="info" >保存举证</van-button></van-col>
+            </van-row>
+        </van-row>
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_juzheng/index.js"></script>
+
+</html>

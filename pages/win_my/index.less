@@ -1,0 +1,82 @@
+@import '../../less/common';
+
+.main {
+    height: calc(100% - 46px);
+    background-color: #e2e2e2;
+    position: relative;
+    overflow-y: auto;
+
+    .my {
+        .rem(height,90);
+        .rem(line-height,90);
+        background: #fff;
+        .rem(font-size,20);
+        display: flex;
+        justify-content: space-around;
+
+        .icon-user {
+            display: inline-block;
+            vertical-align: middle;
+            .rem(width,28);
+            .rem(height,28);
+            background-size: cover;
+            background-position: center;
+            background-image: url("../../image/user.png");
+            .rem(margin-right,14);
+        }
+
+        .address {
+            .rem(font-size,15);
+        }
+    }
+
+    .list-item {
+        .rem(font-size,14);
+        background: #fff;
+        position: relative;
+        .rem(line-height,65);
+        .rem(height,65);
+        margin: 0.1rem 0;
+        padding: 0 0.3rem;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            .rem(width,20);
+            .rem(height,20);
+            background-size: cover;
+            background-position: center;
+            .rem(margin-right,16);
+        }
+
+        .icon-msg {
+            background-image: url("../../image/msg.png");
+        }
+
+        .icon-download {
+            background-image: url("../../image/download.png");
+        }
+
+        .icon-updatepwd {
+            background-image: url("../../image/updatepwd.png");
+        }
+    }
+
+    .bottom-button {
+        width: 55%;
+        margin: 0 auto;
+        .rem(height,37);
+        .rem(font-size,14);
+        background: @bgColorBlue;
+        color: #fff;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+
+    }
+}

@@ -1,0 +1,1 @@
+apiready=function(){apiready_init(),vm.$mount("#wrap")};var vm=new Vue({el:"#wrap",data:{},methods:{onClickLeft:function(){this.closeWin()},openW:function(n){this.openWin(n)}},mounted:function(){}});

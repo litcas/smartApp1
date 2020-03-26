@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>我</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_my/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+<body>
+    <div id="wrap" v-cloak>
+      <van-nav-bar left-arrow  title="我" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+      <van-row class="main">
+        <van-row class="my">
+          <span><i class="icon-user"></i>{{user.username}}</span>
+          <span class="address">{{user.address}}</span>
+        </van-row>
+        <van-row class="list-item">
+          <i class="icon icon-msg"></i><span class="title" @click="openW('win_mymsg')">我的消息</span>
+        </van-row>
+        <van-row class="list-item">
+          <i class="icon icon-download"></i><span class="title"  @click="openW('win_downloadmap')">下载天地图</span>
+        </van-row>
+        <van-row class="list-item">
+          <i class="icon icon-updatepwd"></i><span class="title"  @click="openW('win_updatepwd')">修改密码</span>
+        </van-row>
+        <button class="bottom-button" type="button"  @click="logout">退 出</button>
+      </van-row>
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_my/index.js"></script>
+</html>

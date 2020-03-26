@@ -1,0 +1,79 @@
+@import '../../less/common';
+
+.main {
+    height: calc(100% - 46px);
+    background-color: #e2e2e2;
+    position: relative;
+    overflow-y: hidden;
+
+    .list-item {
+        .rem(font-size,14);
+        background: #fff;
+        position: relative;
+        .rem(height,100);
+        margin: 0.15rem 0;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+        .van-col {
+            text-align: center;
+        }
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            .rem(width,45);
+            .rem(height,45);
+            background-size: 100%;
+            background-position: center;
+        }
+
+        .icon-task-no {
+            background-image: url("../../image/jzno.png");
+        }
+        .icon-task-ed {
+            background-image: url("../../image/jued.png");
+        }
+        .icon-task-ing {
+            background-image: url("../../image/juing.png");
+        }
+
+        .left-wrap {
+            width: 35%;
+            height: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .right-wrap {
+            width: 65%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            .rem(font-size,20);
+
+            .right-item-title {
+                color: #585858;
+                margin-bottom: 0.15rem;
+            }
+
+            .right-item{
+              .rem(font-size,15);
+            }
+
+            .btn-watch {
+                background: #00cc33;
+                border-radius: 20px;
+                line-height: 2.2;
+                padding: 0 0.2rem;
+                color: #fff;
+                .rem(margin-left,10);
+                .rem(font-size,13);
+            }
+        }
+    }
+}

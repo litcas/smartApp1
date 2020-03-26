@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>我的任务</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_prooftask/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+
+<body>
+    <div id="wrap" v-cloak>
+        <van-nav-bar left-arrow title="我的任务" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+        <van-row class="main">
+            <van-row class="list-item" @click="openW('win_prooftask_no')">
+                <div class="left-wrap" ><i class="icon icon-task-no"></i></div>
+                <div class="right-wrap" >
+                  <p class="right-item-title">未举证的任务</p>
+                  <p class="right-item">4个 <button class="btn-watch">查 看</button></p>
+                </div>
+            </van-row>
+            <van-row class="list-item" @click="openW('win_prooftask_ing')">
+                <div class="left-wrap" ><i class="icon icon-task-ing"></i></div>
+                <div class="right-wrap" >
+                  <p class="right-item-title">正在举证的任务</p>
+                  <p class="right-item">1个 <button class="btn-watch">查 看</button></p>
+                </div>
+            </van-row>
+            <van-row class="list-item" @click="openW('win_prooftask_already')">
+                <div class="left-wrap" ><i class="icon icon-task-ed"></i></div>
+                <div class="right-wrap" >
+                  <p class="right-item-title">已举证的任务</p>
+                  <p class="right-item">1个 <button class="btn-watch">查 看</button></p>
+                </div>
+            </van-row>
+        </van-row>
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_prooftask/index.js"></script>
+
+</html>

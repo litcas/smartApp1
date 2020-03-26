@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>云查询结果</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_cloudquery_result/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+<body>
+    <div id="wrap" v-cloak>
+      <van-nav-bar left-arrow title="查询结果" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+      <van-row class="main">
+        <van-row class="tab-header">
+          <span class="tab-item">查询编号</span>
+          <span class="tab-item">查询时间</span>
+          <span class="tab-item">筛选</span>
+        </van-row>
+        <van-row class="tab-main">
+          <van-row class="list-item" v-for="(o,index) in list" :key="o.id" @click="openW('win_cloudquery_resultshow',o)">
+            <span class="list-item-col">NO.{{index+1}}</span>
+            <span class="list-item-col">{{o.datetime}}</span>
+            <span class="list-item-col">{{o.status}}</span>
+          </van-row>
+        </van-row>
+      </van-row>
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_cloudquery_result/index.js"></script>
+</html>

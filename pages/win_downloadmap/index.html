@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>下载天地图</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_downloadmap/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+<body>
+    <div id="wrap" v-cloak>
+      <van-nav-bar left-arrow title="下载天地图" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+      <van-row class="main">
+        <van-row class="list-item" v-for="o in list" :key="o.id">{{o.name}}<i class="icon icon-download"></i><i class="icon icon-remove"></i></van-row>
+      </van-row>
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_downloadmap/index.js"></script>
+</html>

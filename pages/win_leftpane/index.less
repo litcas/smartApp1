@@ -1,0 +1,97 @@
+@import '../../less/common';
+
+.main {
+    height: 100%;
+    background-color: #e2e2e2;
+    position: relative;
+    overflow-y: auto;
+
+    .my {
+        .rem(height,90);
+        .rem(line-height,90);
+        background: #fff;
+        .rem(font-size,20);
+        display: flex;
+        padding: 0 .3rem;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+
+        .icon-user {
+            display: inline-block;
+            vertical-align: middle;
+            .rem(width,28);
+            .rem(height,28);
+            background-size: cover;
+            background-position: center;
+            background-image: url("../../image/user.png");
+            .rem(margin-right,14);
+        }
+
+    }
+
+    .list-item {
+        .rem(font-size,16);
+        background: #fff;
+        position: relative;
+        .rem(line-height,65);
+        .rem(height,65);
+        padding: 0 0.3rem;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            .rem(width,20);
+            .rem(height,20);
+            background-size: cover;
+            background-position: center;
+            .rem(margin-right,16);
+        }
+
+        .icon-tcqh {
+            background-image: url("../../image/tuceng.png");
+        }
+
+        .icon-fwcx {
+            background-image: url("../../image/fwcx.png");
+        }
+
+        .icon-fzrw {
+            background-image: url("../../image/jzrw.png");
+        }
+
+        .icon-ywtc {
+            background-image: url("../../image/yewutuceng.png");
+        }
+
+        .icon-gbxt {
+            background-image: url("../../image/gbxt.png");
+        }
+        .icon-zbjc {
+            background-image: url("../../image/zbjc.png");
+        }
+        .icon-jrgb {
+            background-image: url("../../image/jrgb.png");
+        }
+    }
+
+}
+.van-popup-center {
+    bottom: 1%;
+    overflow-y: hidden!important;
+    display: flex;
+    flex-flow: column;
+    width: 85%!important;
+
+    .van-checkbox-group {
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    .button {
+        font-size: 0;
+        padding: 10px;
+        text-align: center;
+    }
+}

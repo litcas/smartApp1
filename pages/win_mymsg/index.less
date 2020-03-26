@@ -1,0 +1,57 @@
+@import '../../less/common';
+
+.main {
+    height: calc(100% - 46px);
+    background-color: #e2e2e2;
+    position: relative;
+    overflow-y: auto;
+
+    .list-item {
+        .rem(font-size,14);
+        background: #fff;
+        position: relative;
+        .rem(line-height,65);
+        .rem(height,65);
+        margin: 0.1rem 0;
+        padding: 0 0.1rem;
+        display: flex;
+        flex-flow: row;
+
+        .title {
+            width: 42%;
+            padding: 0 0.04rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .datetime {
+            width: 32%;
+            padding: 0 0.04rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .watch {
+            color: @bgColorBlue;
+        }
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            .rem(width,26);
+            .rem(height,26);
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .icon-remove {
+            background-image: url("../../image/remove.png");
+            right: 5%;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import '../../less/common';
+
+.main {
+    height: calc(100% - 46px);
+    background-color: #e2e2e2;
+    position: relative;
+    overflow-y: auto;
+
+    .van-tab {
+        .rem(font-size,12);
+    }
+
+    .van-tabs__content {
+        .rem(font-size,14);
+    }
+
+    .table {
+        width: 90%;
+        background: #fff;
+        margin: 20px auto;
+
+        caption {
+            margin-bottom: 20px;
+        }
+
+        th {
+            color: #817b7b;
+            font-weight: 400;
+        }
+
+        td,
+        th {
+            text-align: center;
+            .rem(line-height,30);
+            .rem(height,30);
+        }
+    }
+}

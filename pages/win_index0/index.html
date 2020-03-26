@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>我</title>
+    <script src="../../script/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/win_index0/index.css" />
+    <link rel="stylesheet" href="../../res/vant/index.css">
+</head>
+
+<body>
+    <div id="wrap" v-cloak>
+        <van-nav-bar left-arrow title="范围查询" class="common-header" @click-left="onClickLeft"> </van-nav-bar>
+        <div id="viewDiv">
+
+        </div>
+        <div class="map-header">
+            <template v-if="fwcxing">
+              <van-notice-bar style="width:100%;" color="#1989fa"  background="#ecf9ff" text="请在地图上绘制多边形范围，点击提交查询" left-icon="volume-o"></van-notice-bar>
+            </template>
+
+        </div>
+
+
+
+        <div class="map-aside-right">
+
+            <div class="fwcx-btn" @click="fwcxCLick()">
+                <img src="../../image/fwcx.png" class="fwcx-img">
+                <p class="fwcx-title">绘制范围</p>
+            </div>
+
+        </div>
+        <div class="map-aside-bottom" v-if="fwcxing">
+            <van-button type="info" round size="normal" class="sumit" @click="fwcxComplete">提 交</van-button>
+            <van-button type="info" round size="normal" class="cancal" @click="fwcxCancal">取 消</van-button>
+        </div>
+
+
+
+    </div>
+</body>
+<script src="../../script/vue.min.js"></script>
+<script src="../../script/axios.min.js"></script>
+<script src="../../script/api.js"></script>
+<script src="../../res/vant/vant.min.js"></script>
+<script src="../../script/common.js"></script>
+<script src="../../js/win_index0/index.js"></script>
+
+
+<script src="../../res/arcgisapi/GCJ2WGS.js"></script>
+<script src="../../res/arcgisapi/init.js"></script>
+<script src="../../res/arcgisapi/map.config.js"></script>
+<script src="../../res/arcgisapi/main/map.js"></script>
+<link rel="stylesheet" type="text/css" href="http://218.77.59.2:8601/arcgisapi/4.13/esri/themes/light/main.css" />
+
+</html>

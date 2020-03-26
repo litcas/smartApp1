@@ -1,0 +1,59 @@
+@import '../../less/common';
+
+.main {
+    height: calc(100% - 46px);
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+
+    .input-wrap {
+        .rem(width,264);
+        margin: 0 auto;
+        color: #000;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+        .rem(font-size,13);
+        .rem(margin-top,30);
+
+        label {
+            width: 25%;
+        }
+
+        input {
+            width: 65%;
+            .rem(padding,10);
+            text-align: left;
+            color: #000;
+            caret-color: #000!important;
+        }
+
+        &.code {
+            position: relative;
+
+            .getCode {
+                color: @bgColorBlue;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    .bottom-button {
+        width: 75%;
+        margin: 0 auto;
+        .rem(height,37);
+        .rem(font-size,14);
+        background: @bgColorBlue;
+        color: #fff;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+
+        &.disabled {
+            background: #ccc;
+        }
+    }
+}
